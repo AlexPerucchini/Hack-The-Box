@@ -1,4 +1,4 @@
-<link href="css/retro.css" rel="stylesheet"> 
+(setq markdown-css-paths '("css/retrocss"))
 
 ## HTB-Bastard (10.10.10.9)
 ----
@@ -658,4 +658,3 @@ Windows-Exploit-Suggester % sudo ./windows-exploit-suggester.py --database 2020-
 ```
 
 ```
-</link>
