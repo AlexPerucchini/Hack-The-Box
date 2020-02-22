@@ -1,4 +1,4 @@
-(setq markdown-css-paths '("css/retrocss"))
+<link rel="stylesheet" href="css/retro.css">
 
 ## HTB-Bastard (10.10.10.9)
 ----
