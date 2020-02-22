@@ -13,9 +13,9 @@ In this repository you will find my personal system walkthroughs, including addi
 ---
 ### Resources and Additional Material
 
-* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester){:target="_blank"}
-* [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html){:target="_blank"}
-* [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/){:target="_blank"}
-* [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/){:target="_blank"}
+* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+* [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
+* [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/)
+* [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/)
 
 Enjoy!
