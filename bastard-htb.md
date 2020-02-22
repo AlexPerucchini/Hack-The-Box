@@ -1,11 +1,12 @@
 
 <head>
-<link rel="stylesheet" href="css/retro.css">
+<link href="css/retro.css" rel="stylesheet"></link> 
 </head>
 
 ## HTB-Bastard (10.10.10.9)
 ----
 ### Summary
+![Bastard](images/bastard_4.png)
 
 Additonal resources/reading:
 * [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
