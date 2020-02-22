@@ -1,7 +1,6 @@
 
-<head>
+
 <link href="css/retro.css" rel="stylesheet"></link> 
-</head>
 
 ## HTB-Bastard (10.10.10.9)
 ----
