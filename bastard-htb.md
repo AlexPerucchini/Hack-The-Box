@@ -8,10 +8,10 @@
 ### Summary
 
 Additonal resources/reading:
-* [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
-* [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/)
-* [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/)
-* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+* [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html){:target="_blank"}
+* [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/){:target="_blank"}
+* [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/){:target="_blank"}
+* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester){:target="_blank"}
 
 ---
 ### Scanning/Enumeration
@@ -228,7 +228,7 @@ https://www.exploit-db.com/exploits/44449
 Download and run the https://www.exploit-db.com/exploits/44449 script. Notice that we get a local shell as the 'nt authority\iusr' user. We would need to enumerate the target system and acquire escalated privileges.
 
 ```
-ruby drupageddon2 http://10.10.10.9
+ruby drupalgeddon2 http://10.10.10.9
 ruby: warning: shebang line ending with \r may cause problems
 [*] --==[::#Drupalggedon2::]==--
 --------------------------------------------------------------------------------
@@ -625,7 +625,7 @@ Mode              Size  Type  Last modified              Name
 
 ```
 #### 4. Use Windows Exploit Suggester for privilige escalation
-Github and instructions avaiable from here: [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester) .
+Github and instructions avaiable from here: [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester){:target="_blank"}.
 ```
 Windows-Exploit-Suggester % sudo ./windows-exploit-suggester.py --database 2020-02-22-mssb.xls --systeminfo bastard_info.txt
 
