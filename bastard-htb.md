@@ -225,7 +225,7 @@ https://www.exploit-db.com/exploits/44449
 ---
 
 #### 1. Get a shell on the target system
-Download and run the https://www.exploit-db.com/exploits/44449 script. Notice that we get a local shell as the 'nt authority\iusr' user. We would need to enumerate the target system and acquire escalated priviliges.
+Download and run the https://www.exploit-db.com/exploits/44449 script. Notice that we get a local shell as the 'nt authority\iusr' user. We would need to enumerate the target system and acquire escalated privileges.
 
 ```
 ruby drupageddon2 http://10.10.10.9
