@@ -1,4 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bastard</title>
 <link rel="stylesheet" href="css/retro.css">
+</head>
 
 ## HTB-Bastard (10.10.10.9)
 ----
