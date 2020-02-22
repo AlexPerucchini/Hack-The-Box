@@ -1,6 +1,4 @@
-
-
-<link href="css/retro.css" rel="stylesheet"></link> 
+<link href="css/retro.css" rel="stylesheet"> 
 
 ## HTB-Bastard (10.10.10.9)
 ----
@@ -660,3 +658,4 @@ Windows-Exploit-Suggester % sudo ./windows-exploit-suggester.py --database 2020-
 ```
 
 ```
+</link>

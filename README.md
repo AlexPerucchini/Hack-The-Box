@@ -7,8 +7,8 @@ In this repository you will find my personal system walkthroughs, including addi
 ---
 ### Systems Walkthroughs
 
-* [bastard](bastard-htb.md)
-* [beep](beep-htb.md)
+* [Bastard](bastard-htb.md)
+* [Beep](beep-htb.md)
 
 ---
 ### Resources and Additional Material
