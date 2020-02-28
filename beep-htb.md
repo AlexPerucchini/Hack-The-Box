@@ -7,6 +7,7 @@
 
 ### Summary
 ---
+![Bastard](images/beep.png)
 This was a medium difficulty system for me to enumerate due to the many port/applications open for possible exploitation.
 
 ---

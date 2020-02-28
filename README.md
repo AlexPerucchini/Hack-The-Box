@@ -7,15 +7,17 @@ In this repository you will find my personal system walkthroughs, including addi
 ---
 ### Systems Walkthroughs
 
+* [Active](active-htb.md)
 * [Bastard](bastard-htb.md)
 * [Beep](beep-htb.md)
 
 ---
 ### Resources and Additional Material
 
-* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+* [Windows-beeExploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 * [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
 * [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/)
 * [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/)
+* [Group Policy Pwnage](https://blog.rapid7.com/2016/07/27/pentesting-in-the-real-world-group-policy-pwnage/)
 
 Enjoy!

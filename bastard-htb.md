@@ -634,7 +634,7 @@ Mode              Size  Type  Last modified              Name
 
 ```
 #### 4. Use Windows Exploit Suggester for privilige escalation
-Github and instructions avaiable from here: [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester){:target="_blank"}.
+Github and instructions avaiable from here: [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester).
 ```
 Windows-Exploit-Suggester % sudo ./windows-exploit-suggester.py --database 2020-02-22-mssb.xls --systeminfo bastard_info.txt
 
