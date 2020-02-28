@@ -1,6 +1,6 @@
 
 <head>
-<link rel="stylesheet" href="css/retro.css">
+    <link rel="stylesheet" href="css/retro.css">
 </head>
 
 ## HTB-Beep (10.10.10.7)

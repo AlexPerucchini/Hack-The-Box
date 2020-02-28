@@ -221,6 +221,14 @@ https://www.rapid7.com/db/modules/exploit/windows/dcerpc/ms03_026_dcom
 Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution
 https://www.exploit-db.com/exploits/44449
 
+[M] MS13-005: Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege (2778930) - Important
+[E] MS11-011: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (2393802) - Important
+[M] MS10-073: Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege (981957) - Important
+[M] MS10-061: Vulnerability in Print Spooler Service Could Allow Remote Code Execution (2347290) - Critical
+[E] MS10-059: Vulnerabilities in the Tracing Feature for Services Could Allow Elevation of Privilege (982799) - Important
+[E] MS10-047: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (981852) - Important
+
+
 ```
 ### Exploits 
 ---
@@ -651,13 +659,16 @@ Windows-Exploit-Suggester % sudo ./windows-exploit-suggester.py --database 2020-
 [M] MS10-061: Vulnerability in Print Spooler Service Could Allow Remote Code Execution (2347290) - Critical
 [E] MS10-059: Vulnerabilities in the Tracing Feature for Services Could Allow Elevation of Privilege (982799) - Important
 [E] MS10-047: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (981852) - Important
-[M] MS10-002: Cumulative Security Update for Internet Explorer (978207) - Critical
-[M] MS09-072: Cumulative Security Update for Internet Explorer (976325) - Critical
 [*] done
-
-
 ```
 #### 5. Run meterpreter for priviliged user escalation
+
+After iterating through all for the discovered Windows exploits, I found...
+* https://www.rapid7.com/db/vulnerabilities/WINDOWS-HOTFIX-MS10-059
+* https://github.com/SecWiki/windows-kernel-exploits/blob/master/MS10-059/Churraskito_exe.zip
+
+I uploaded the Churraskito.exe to the target system (Bastard) and ran the following:
+
 ```
 
 ```
