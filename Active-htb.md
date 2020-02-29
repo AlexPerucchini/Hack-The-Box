@@ -138,10 +138,7 @@ Reconnecting with SMB1 for workgroup listing.
 do_connect: Connection to 10.10.10.100 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
 Failed to connect with SMB1 -- no workgroup available
 ```
-After trying to connect to the different shares, Replication is the only one with anonymous logi
-```
-
-```
+After trying to connect to the different shares, Replication is the only one with anonymous login
 
 ```
 ~/Documents/code/scratch$ sudo smbclient \\\\10.10.10.100\\Replication\\
