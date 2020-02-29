@@ -12,12 +12,13 @@ In this repository you will find my personal system walkthroughs, including addi
 * [Beep](beep-htb.md)
 
 ---
-### Resources and Additional Material
+### Resources and Additional Materials
 
-* [Windows-beeExploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+* [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 * [Windows Privilege Escalation Fundamentals](https://www.fuzzysecurity.com/tutorials/16.html)
 * [MSFVENOM](https://www.offensive-security.com/metasploit-unleashed/Msfvenom/)
 * [Privilege Escalation](https://www.offensive-security.com/metasploit-unleashed/privilege-escalation/)
 * [Group Policy Pwnage](https://blog.rapid7.com/2016/07/27/pentesting-in-the-real-world-group-policy-pwnage/)
+* [Kerberos Roasting](https://pentestlab.blog/2018/06/12/kerberoast/)
 
 Enjoy!
