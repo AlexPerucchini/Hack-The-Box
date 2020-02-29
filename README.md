@@ -7,7 +7,7 @@ In this repository you will find my personal system walkthroughs, including addi
 ---
 ### Systems Walkthroughs
 
-* [Active](active-htb.md)
+* [Active](Active-htb.md)
 * [Bastard](bastard-htb.md)
 * [Beep](beep-htb.md)
 
