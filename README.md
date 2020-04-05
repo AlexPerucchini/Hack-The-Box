@@ -11,6 +11,7 @@ In this repository you will find my personal system walkthroughs, including addi
 * [Bastard](bastard-htb.md)
 * [Beep](beep-htb.md)
 * [Popcorn](popcorn-htb.md)
+* [Misc](misc-htb.md)
 
 ---
 ### Resources and Additional Materials

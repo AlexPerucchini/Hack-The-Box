@@ -1,9 +1,7 @@
 
 <head>
    <link rel="stylesheet" href="css/retro.css">
-</head>
-
-## HTB-Active (10.10.10.100)
+</head>git 
 ----
 ### Summary
 ![Active](images/active.png)
