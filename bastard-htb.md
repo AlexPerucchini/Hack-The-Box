@@ -3,7 +3,7 @@
    <link rel="stylesheet" href="css/retro.css">
 </head>
 
-## HTB-Bastard (10.10.10.9)
+## HTB-Bastard (10.10.10.9) - Not completed (needs priv esc)
 ----
 ### Summary
 ![Bastard](images/bastard_4.png)
