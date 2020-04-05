@@ -11,7 +11,7 @@ All systems covered in the section 12 'Mid-Course Capstone' (https://www.udemy.c
 
 ----
 #### Walkthrough - Legacy (Windows)
-* nmap -A -T4 -p- 10.10.10.48 
+* nmap -A -T4 -p- 10.10.10.4
     * ports 139/145 are open (SMB)
 * smbclient -L \\\\10.01.10.4\\ 
     * no connection
@@ -33,6 +33,8 @@ All systems covered in the section 12 'Mid-Course Capstone' (https://www.udemy.c
         * get CTFs     
 ---
 ####   Walkthrough - Lame ()
+
+
 ---
 
 ---
