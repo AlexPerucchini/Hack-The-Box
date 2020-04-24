@@ -4,6 +4,7 @@
 </head>git 
 ----
 ### Summary
+
 ![Active](images/active.png)
 
 Additonal resources/reading:
