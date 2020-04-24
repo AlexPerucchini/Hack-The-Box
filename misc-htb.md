@@ -62,4 +62,5 @@ All systems covered in the section 12 'Mid-Course Capstone' (https://www.udemy.c
     * crack passwords with hashcat
 ---
 ####   Walkthrough - Blue 
+* nmap -A -T4 -p- 10.10.10.40
 ---
