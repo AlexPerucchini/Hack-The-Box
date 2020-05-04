@@ -10,7 +10,7 @@ In this repository you will find my personal system walkthroughs, including addi
 * [Active](active-htb.md)
 * [Bastard](bastard-htb.md)
 * [Beep](beep-htb.md)
-* [Devel](Devel-htb.md)
+* [Devel](devel-htb.md)
 * [Popcorn](popcorn-htb.md)
 * [Misc](misc-htb.md)
 
