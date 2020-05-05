@@ -11,7 +11,6 @@
 Additonal resources/reading:
 * [Official course walkthrough](https://www.udemy.com/course/windows-privilege-escalation-for-beginners/learn/lecture/19038590#overview)
 
-
 ---
 ### Scanning/Enumeration
 ---
