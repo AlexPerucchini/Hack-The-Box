@@ -7,12 +7,12 @@ In this repository you will find my personal system walkthroughs, including addi
 ---
 ### Systems Walkthroughs
 
-* [Active](active-htb.md)
-* [Bastard](bastard-htb.md)
-* [Beep](beep-htb.md)
-* [Devel](devel-htb.md)
-* [Popcorn](popcorn-htb.md)
-* [Misc](misc-htb.md)
+* [Active](systems/active-htb.md)
+* [Bastard](systems/bastard-htb.md)
+* [Beep](systems/beep-htb.md)
+* [Devel](systems/devel-htb.md)
+* [Popcorn](systems/popcorn-htb.md)
+* [Misc](systems/misc-htb.md)
 
 ---
 ### Resources and Additional Materials
