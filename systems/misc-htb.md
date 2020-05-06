@@ -3,7 +3,10 @@
     <link rel="stylesheet" href="css/retro.css">
 </head>
 
+---
+
 ## Misc Writeups
+
 ----
 ### Summary
 
